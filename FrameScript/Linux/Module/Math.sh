@@ -20,6 +20,7 @@ function FrameScript.Math.Arithmetic.calculate() {
 	echo -n $result;
 }
 
+# sample1 - FrameScript.Math.Arithmetic.test;
 function FrameScript.Math.Arithmetic.test() {
 	echo -e "\nTesting FrameScript.Math.Arithmetic";
 	echo -e "\nFrameScript.Math.Arithmetic.calculate()";
