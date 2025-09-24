@@ -5,6 +5,11 @@
 
 # region default
 
+if [[ "${BASH_VERSINFO:-0}" -lt 4 ]]; then
+	echo "Bash version 4.0 or higher is required.";
+	exit 1;
+fi
+
 declare t1="$(realpath "${BASH_SOURCE[0]}")";
 declare t2="$(dirname "${t1}")";
 declare -A FrameScript=(
@@ -90,7 +95,7 @@ function FrameScript.test() {
 # Output: <void> No output.
 function FrameScript.destruct() {
 	echo;
-	exit;
+	exit 0;
 }
 
 FrameScript.construct "${*}";
