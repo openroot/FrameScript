@@ -16,7 +16,6 @@ source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Math/
 # FrameScript.Terminal.Application.construct
 # Output: <void> No output.
 function FrameScript.Terminal.Application.construct() {
-	declare -gA FrameScript;
 	declare -gA FrameScript["cli,argument,allValues"]="${*}";
 	declare -gA FrameScript["cli,argument,count"]=${#};
 	FrameScript.Memory.Static.construct;
@@ -27,7 +26,7 @@ function FrameScript.Terminal.Application.construct() {
 # FrameScript.Terminal.Application.initiate
 # Output: <string> Initiation result.
 function FrameScript.Terminal.Application.initiate() {
-	declare -r welcomeMessage="${TEXTSTYLE_BACKGROUND_BLUE} FrameScript ${TEXTSTYLE_RESET}${TEXTSTYLE_OVERLINED_FOREGROUND_BLUE} Terminal Access Point${TEXTSTYLE_RESET}";
+	declare -r welcomeMessage="${FrameScript["textStyle,backgroundBlue"]} FrameScript ${FrameScript["textStyle,reset"]}${FrameScript["textStyle,overlinedForegroundBlue"]} Terminal Access Point${FrameScript["textStyle,reset"]}";
 	echo -en "${welcomeMessage}";
 }
 

@@ -43,7 +43,7 @@ function FrameScript.construct() {
 function FrameScript.execute() {
 	while :
 	do
-		echo -e " ${TEXTSTYLE_SLOWBLINK}Options${TEXTSTYLE_RESET} ${TEXTSTYLE_BOLD_INVERTED} 0 = Exit | 1 = One | 2 = Two | 3 = Test | 4 = rsync ${TEXTSTYLE_RESET}";
+		echo -e " ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = One | 2 = Two | 3 = Test | 4 = rsync ${FrameScript["textStyle,reset"]}";
 		echo -en "Please enter option [0|1|2|3|4]: ";
 		read -n 1 operation;
 		echo -e "\n\n";
@@ -69,7 +69,7 @@ function FrameScript.execute() {
 			;;
 		esac
 		echo -e "\n";
-		echo -en "Press any key to continue${TEXTSTYLE_SLOWBLINK}...${TEXTSTYLE_RESET} ";
+		echo -en "Press any key to continue${FrameScript["textStyle,slowBlink"]}...${FrameScript["textStyle,reset"]} ";
 		read -n 1 t1;
 		unset "${t1}";
 		clear;
@@ -80,10 +80,10 @@ function FrameScript.execute() {
 # FrameScript.test
 # Output: <string> Test result.
 function FrameScript.test() {
-	echo -e "${TEXTSTYLE_BACKGROUND_GREEN} ${FrameScript["application,name"]} testing is started. ${TEXTSTYLE_RESET}\n";
+	echo -e "${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} testing is started. ${FrameScript["textStyle,reset"]}\n";
 	echo -e "CLI argument all values = ${FrameScript["cli,argument,allValues"]}\nCLI argument count = ${FrameScript["cli,argument,count"]}\n";
 	FrameScript.Math.Arithmetic.test;
-	echo -e "\n${TEXTSTYLE_BACKGROUND_GREEN} ${FrameScript["application,name"]} testing is completed. ${TEXTSTYLE_RESET}";
+	echo -e "\n${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} testing is completed. ${FrameScript["textStyle,reset"]}";
 }
 
 # Destructor
