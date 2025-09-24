@@ -10,24 +10,19 @@ if [[ "${BASH_VERSINFO:-0}" -lt 4 ]]; then
 	exit 1;
 fi
 
-declare t1="$(realpath "${BASH_SOURCE[0]}")";
-declare t2="$(dirname "${t1}")";
-declare -A FrameScript=(
-	["applicationName"]="FrameScript"
-	["applicationEnvironment"]="Linux"
-	["applicationVersion"]="0.0.1"
-	["rootScriptAbsolutePath"]="${t1}"
-	["rootDirectoryAbsolutePath"]="${t2}"
-);
-FrameScript+=(
-	["latestVersionDirectoryAbsolutePath"]="${FrameScript["rootDirectoryAbsolutePath"]}/${FrameScript["applicationName"]}/${FrameScript["applicationEnvironment"]}/${FrameScript["applicationVersion"]}"
-);
+declare -A FrameScript;
+FrameScript["application,name"]="FrameScript";
+FrameScript["application,environment"]="Linux";
+FrameScript["application,version"]="0.0.1";
+FrameScript["application,absolutePath,rootScript"]="$(realpath "${BASH_SOURCE[0]}")";
+FrameScript["application,absolutePath,rootDirectory"]="$(dirname "${FrameScript["application,absolutePath,rootScript"]}")";
+FrameScript["application,absolutePath,versionDirectory"]="${FrameScript["application,absolutePath,rootDirectory"]}/${FrameScript["application,name"]}/${FrameScript["application,environment"]}/${FrameScript["application,version"]}";
 
 # end region
 
 # region source
 
-source "${FrameScript["latestVersionDirectoryAbsolutePath"]}/Module/Terminal/Application.sh";
+source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Terminal/Application.sh";
 
 # end region
 
@@ -76,6 +71,7 @@ function FrameScript.execute() {
 		echo -e "\n";
 		echo -en "Press any key to continue${TEXTSTYLE_SLOWBLINK}...${TEXTSTYLE_RESET} ";
 		read -n 1 t1;
+		unset "${t1}";
 		clear;
 	done
 }
@@ -84,10 +80,10 @@ function FrameScript.execute() {
 # FrameScript.test
 # Output: <string> Test result.
 function FrameScript.test() {
-	echo -e "${TEXTSTYLE_BACKGROUND_GREEN} ${FrameScript["applicationName"]} testing is started. ${TEXTSTYLE_RESET}\n";
-	echo -e "CLI argument values = ${FrameScript["cliArgumentValue"]}\nCLI arguments count = ${FrameScript["cliArgumentsCount"]}\n";
+	echo -e "${TEXTSTYLE_BACKGROUND_GREEN} ${FrameScript["application,name"]} testing is started. ${TEXTSTYLE_RESET}\n";
+	echo -e "CLI argument all values = ${FrameScript["cli,argument,allValues"]}\nCLI argument count = ${FrameScript["cli,argument,count"]}\n";
 	FrameScript.Math.Arithmetic.test;
-	echo -e "\n${TEXTSTYLE_BACKGROUND_GREEN} ${FrameScript["applicationName"]} testing is completed. ${TEXTSTYLE_RESET}";
+	echo -e "\n${TEXTSTYLE_BACKGROUND_GREEN} ${FrameScript["application,name"]} testing is completed. ${TEXTSTYLE_RESET}";
 }
 
 # Destructor

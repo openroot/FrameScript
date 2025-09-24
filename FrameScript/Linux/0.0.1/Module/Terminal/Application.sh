@@ -5,8 +5,8 @@
 
 # region source
 
-source "${FrameScript["latestVersionDirectoryAbsolutePath"]}/Module/Memory/Static.sh";
-source "${FrameScript["latestVersionDirectoryAbsolutePath"]}/Module/Math/Arithmetic.sh";
+source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Memory/Static.sh";
+source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Math/Arithmetic.sh";
 
 # end region
 
@@ -16,10 +16,9 @@ source "${FrameScript["latestVersionDirectoryAbsolutePath"]}/Module/Math/Arithme
 # FrameScript.Terminal.Application.construct
 # Output: <void> No output.
 function FrameScript.Terminal.Application.construct() {
-	declare -gA FrameScript+=(
-		["cliArgumentValue"]="${*}"
-		["cliArgumentsCount"]=${#}
-	);
+	declare -gA FrameScript;
+	declare -gA FrameScript["cli,argument,allValues"]="${*}";
+	declare -gA FrameScript["cli,argument,count"]=${#};
 	FrameScript.Memory.Static.construct;
 	FrameScript.Terminal.Application.initiate;
 }
