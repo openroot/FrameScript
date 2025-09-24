@@ -14,14 +14,14 @@
 # Output: <number> Calculation result.
 function FrameScript.Math.Arithmetic.calculate() {
 	declare value1=${1};
-	declare operation=${2};
+	declare operation="${2}";
 	declare value2=${3};
 	declare scale=${4};
 	declare result=$(bc -l <<< "scale=${scale}; ${value1} ${operation} ${value2}");
 	echo -n $result;
 }
 
-# Testing
+# Test
 # FrameScript.Math.Arithmetic.test
 # Output: <string> Test result.
 function FrameScript.Math.Arithmetic.test() {

@@ -5,8 +5,8 @@
 
 # region source
 
-source "./FrameScript/Linux/Module/Memory/Static.sh";
-source "./FrameScript/Linux/Module/Math/Arithmetic.sh";
+source "${FrameScript["latestVersionDirectoryAbsolutePath"]}/Module/Memory/Static.sh";
+source "${FrameScript["latestVersionDirectoryAbsolutePath"]}/Module/Math/Arithmetic.sh";
 
 # end region
 
@@ -16,8 +16,10 @@ source "./FrameScript/Linux/Module/Math/Arithmetic.sh";
 # FrameScript.Terminal.Application.construct
 # Output: <void> No output.
 function FrameScript.Terminal.Application.construct() {
-	declare -gA FrameScript["cliArgumentValue"]=${*};
-	declare -gA FrameScript["cliArgumentsCount"]=${#};
+	declare -gA FrameScript+=(
+		["cliArgumentValue"]="${*}"
+		["cliArgumentsCount"]=${#}
+	);
 	FrameScript.Memory.Static.construct;
 	FrameScript.Terminal.Application.initiate;
 }
@@ -27,7 +29,7 @@ function FrameScript.Terminal.Application.construct() {
 # Output: <string> Initiation result.
 function FrameScript.Terminal.Application.initiate() {
 	declare -r welcomeMessage="${TEXTSTYLE_BACKGROUND_BLUE} FrameScript ${TEXTSTYLE_RESET}${TEXTSTYLE_OVERLINED_FOREGROUND_BLUE} Terminal Access Point${TEXTSTYLE_RESET}";
-	echo -en ${welcomeMessage};
+	echo -en "${welcomeMessage}";
 }
 
 # end region
