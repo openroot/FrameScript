@@ -5,22 +5,30 @@
 
 # region source
 
-source ./FrameScript/Linux/Module/Math.sh;
+source "./FrameScript/Linux/Module/Terminal/Application.sh";
 
 # end region
 
 # region FrameScript
 
+# Constructor
+# FrameScript.construct
+# Output: <void> No output.
 function FrameScript.construct() {
-	argument1=$1;
-	FrameScript.application;
+	FrameScript.Terminal.Application.construct ${*};
+	FrameScript.test;
 }
 
-function FrameScript.application() {
-	echo "Hello from FrameScript!";
+# Testing
+# FrameScript.test
+# Output: <string> Test result.
+function FrameScript.test() {
+	echo -e "\n\n${TEXTSTYLE_BACKGROUND_GREEN} FrameScript testing is started. ${TEXTSTYLE_RESET}\n";
+	echo -e "CLI argument values = ${FrameScript["cliArgumentValue"]}\nCLI arguments count = ${FrameScript["cliArgumentsCount"]}\n";
 	FrameScript.Math.Arithmetic.test;
+	echo -e "\n${TEXTSTYLE_BACKGROUND_GREEN} FrameScript testing is completed. ${TEXTSTYLE_RESET}\n";
 }
 
-FrameScript.construct;
+FrameScript.construct ${*};
 
 # end region
