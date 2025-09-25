@@ -16,7 +16,6 @@ function FrameScript.Memory.Static.construct() {
 # FrameScript.Memory.Static.textStyle
 # Output: <void> No output.
 function FrameScript.Memory.Static.textStyle() {
-	declare -gA FrameScript;
 	# Default
 	FrameScript["textStyle,reset"]='\033[0m';
 	FrameScript["textStyle,bold"]='\033[1m';

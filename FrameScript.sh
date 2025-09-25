@@ -5,7 +5,7 @@
 
 # region default
 
-if [[ "${BASH_VERSINFO:-0}" -lt 4 ]]; then
+if [[ ${BASH_VERSINFO:-0} -lt 4 ]]; then
 	echo "Bash version 4.0 or higher is required.";
 	exit 1;
 fi
@@ -33,7 +33,7 @@ source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Termi
 # Output: <void> No output.
 function FrameScript.construct() {
 	clear;
-	FrameScript.Terminal.Application.construct "${*}";
+	FrameScript.Terminal.Application.construct "${1}" ${2} "${3}";
 	echo -e "\n";
 }
 
@@ -41,37 +41,57 @@ function FrameScript.construct() {
 # FrameScript.execute
 # Output: <string> Execution result.
 function FrameScript.execute() {
+	declare t1=-1;
+	declare t2=" ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = rsync | 2 = Two | 3 = Three | 4 = Test | 5 = Information ${FrameScript["textStyle,reset"]}";
+	declare t3="Please enter option [0|1|2|3|4|5]: ";
 	while :
 	do
-		echo -e " ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = One | 2 = Two | 3 = Test | 4 = rsync ${FrameScript["textStyle,reset"]}";
-		echo -en "Please enter option [0|1|2|3|4]: ";
-		read -n 1 operation;
+		echo -e "${t2}";
+		if [[ "${t1}" -eq -1 ]] 2>/dev/null; then
+			echo -en "${t3}";
+			read -n 1 operation;
+			clear;
+			echo -e "${t2}";
+		else
+			operation="${t1}";
+		fi
+		echo -en "${t3}${operation}";
 		echo -e "\n\n";
 		case $operation in
 			0)
-				# Exit the application
 				break;
 			;;
 			1)
-				echo "Option 1";
+				declare rsyncSourceDirectory="/media/openroot/ProjectSpring53/ProjectSpring53";
+				declare rsyncDestinationDirectory="/media/openroot/OriginalStore53/--additional/--rsync/--backup";
+				if [[ -d "${rsyncSourceDirectory}" && -d "${rsyncDestinationDirectory}" ]]; then
+					echo -e "${FrameScript["textStyle,foregroundGreen"]} rsync from ${rsyncSourceDirectory} to ${rsyncDestinationDirectory} is started. ${FrameScript["textStyle,reset"]}\n";
+					rsync -av --delete "${rsyncSourceDirectory}" "${rsyncDestinationDirectory}";
+					echo -e "\n${FrameScript["textStyle,foregroundGreen"]} rsync from ${rsyncSourceDirectory} to ${rsyncDestinationDirectory} is completed. ${FrameScript["textStyle,reset"]}";
+				else
+					echo -e "${FrameScript["textStyle,foregroundRed"]} Source or Destination directory does not exist for rsync. ${FrameScript["textStyle,reset"]}";
+					echo -e "  - Source: ${rsyncSourceDirectory}";
+					echo -e "  - Destination: ${rsyncDestinationDirectory}";
+				fi
 			;;
 			2)
 				echo "Option 2";
 			;;
 			3)
-				FrameScript.test;
+				echo "Option 3";
 			;;
 			4)
-				rsync -av "/media/openroot/ProjectSpring53/ProjectSpring53" "/media/openroot/OriginalStore53/--additional/--rsync/--backup";
+				FrameScript.test;
+			;;
+			5)
+				FrameScript.Terminal.Application.information;
 			;;
 			*)
 				echo "Unknown option";
 			;;
 		esac
 		echo -e "\n";
-		echo -en "Press any key to continue${FrameScript["textStyle,slowBlink"]}...${FrameScript["textStyle,reset"]} ";
 		read -n 1 t1;
-		unset "${t1}";
 		clear;
 	done
 }
@@ -81,7 +101,6 @@ function FrameScript.execute() {
 # Output: <string> Test result.
 function FrameScript.test() {
 	echo -e "${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} testing is started. ${FrameScript["textStyle,reset"]}\n";
-	echo -e "CLI argument all values = ${FrameScript["cli,argument,allValues"]}\nCLI argument count = ${FrameScript["cli,argument,count"]}\n";
 	FrameScript.Math.Arithmetic.test;
 	echo -e "\n${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} testing is completed. ${FrameScript["textStyle,reset"]}";
 }
@@ -94,7 +113,7 @@ function FrameScript.destruct() {
 	exit 0;
 }
 
-FrameScript.construct "${*}";
+FrameScript.construct "${0}" ${#} "${*}";
 FrameScript.execute;
 FrameScript.destruct;
 
