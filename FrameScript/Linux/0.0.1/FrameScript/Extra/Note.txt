@@ -73,6 +73,11 @@ Detail <- Section
 Information <- Segment
 Description <- Division
 
+Structure: Element
+Category <- Subject
+Group <- Class
+Node <- Chapter
+
 -------
 Memory <- Static, Dynamic, Quant
 -------
