@@ -78,6 +78,66 @@ Category <- Subject
 Group <- Class
 Node <- Chapter
 
+Program: Centre
+Project <- Dimension
+Media <- Content
+Action <- Event
+
+Step: Story
+Previous <- Format
+Present <- Item
+Next <- Issue
+
+Diary: Album
+Message <- Pin
+Board <- Push
+Task <- Pull
+
+Instrument: Tool
+Frequency <- Device
+Charge <- Pay
+Signal <- Basic
+
+Pool: Hook
+Account <- Main
+Register <- Card
+Book <- Serial
+
+Control: Document
+Key <- Factor
+Volume <- Publish
+Version <- Release
+
+Platform: Machine
+Configuration <- Scale
+Operation <- Environment
+Setting <- Formula
+
+Exchange: Logarithm
+Convert <- Query
+Export <- Archive
+Import <- Sequence
+
+Expression: Pair
+Compression <- Algorithm
+Synchronisation <- Security
+Transaction <- Symbol
+
+Appendix: Watch
+Stack <- Routine
+Queue <- Schedule
+Graph <- Service
+
+Power: Edit
+Point <- Flag
+Value <- Result
+Score <- Return
+
+Index: Chart
+Ticket <- Series
+Coupon <- Thread
+Mail <- Relay
+
 -------
 Memory <- Static, Dynamic, Quant
 -------
