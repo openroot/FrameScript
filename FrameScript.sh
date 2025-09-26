@@ -39,10 +39,10 @@ function FrameScript.construct() {
 
 # Execution
 # FrameScript.execute
-# Output: <string> Execution result.
+# Output: <string> Executional value.
 function FrameScript.execute() {
 	declare t1=-1;
-	declare t2=" ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = rsync | 2 = Two | 3 = Three | 4 = Test | 5 = Information ${FrameScript["textStyle,reset"]}";
+	declare t2=" ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = rsync | 2 = Two | 3 = Three | 4 = Sample | 5 = Information ${FrameScript["textStyle,reset"]}";
 	declare t3="Please enter option [0|1|2|3|4|5]: ";
 	while :
 	do
@@ -81,7 +81,7 @@ function FrameScript.execute() {
 				echo "Option 3";
 			;;
 			4)
-				FrameScript.test;
+				FrameScript.sample;
 			;;
 			5)
 				FrameScript.Terminal.Application.information;
@@ -96,13 +96,13 @@ function FrameScript.execute() {
 	done
 }
 
-# Test
-# FrameScript.test
-# Output: <string> Test result.
-function FrameScript.test() {
-	echo -e "${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} testing is started. ${FrameScript["textStyle,reset"]}\n";
-	FrameScript.Math.Arithmetic.test;
-	echo -e "\n${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} testing is completed. ${FrameScript["textStyle,reset"]}";
+# Sampling
+# FrameScript.sample
+# Output: <string> FrameScript samples.
+function FrameScript.sample() {
+	echo -e "${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} sampling is started. ${FrameScript["textStyle,reset"]}\n";
+	FrameScript.Math.Arithmetic.sample;
+	echo -e "\n${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} sampling is completed. ${FrameScript["textStyle,reset"]}";
 }
 
 # Destructor

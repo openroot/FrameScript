@@ -21,11 +21,11 @@ function FrameScript.Math.Arithmetic.calculate() {
 	echo -n $result;
 }
 
-# Test
-# FrameScript.Math.Arithmetic.test
-# Output: <string> Test result.
-function FrameScript.Math.Arithmetic.test() {
-	echo "Testing FrameScript.Math.Arithmetic";
+# Sampling
+# FrameScript.Math.Arithmetic.sample
+# Output: <string> Arithmetic samples.
+function FrameScript.Math.Arithmetic.sample() {
+	echo "FrameScript.Math.Arithmetic";
 	echo -e "\nFrameScript.Math.Arithmetic.calculate()";
 	echo "2 + 3 = $(FrameScript.Math.Arithmetic.calculate 2 '+' 3 2)";
 	echo "5.5 - 1.2 = $(FrameScript.Math.Arithmetic.calculate 5.5 '-' 1.2 2)";

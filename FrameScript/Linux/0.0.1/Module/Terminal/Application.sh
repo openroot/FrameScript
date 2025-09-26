@@ -6,6 +6,7 @@
 # region source
 
 source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Memory/Static.sh";
+source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Memory/Quant.sh";
 source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Math/Arithmetic.sh";
 
 # end region
@@ -27,12 +28,13 @@ function FrameScript.Terminal.Application.construct() {
 	FrameScript["terminal,hostname"]="${HOSTNAME}";
 	FrameScript["terminal,user"]="${USER}";
 	FrameScript.Memory.Static.construct;
+	FrameScript.Memory.Quant.construct;
 	FrameScript.Terminal.Application.initiate;
 }
 
 # Initialization
 # FrameScript.Terminal.Application.initiate
-# Output: <string> Initiation result.
+# Output: <string> Initiation message.
 function FrameScript.Terminal.Application.initiate() {
 	declare -r welcomeMessage="${FrameScript["textStyle,backgroundBlue"]} FrameScript ${FrameScript["textStyle,reset"]}${FrameScript["textStyle,overlinedForegroundBlue"]} Terminal Access Point${FrameScript["textStyle,reset"]}";
 	echo -en "${welcomeMessage}";
