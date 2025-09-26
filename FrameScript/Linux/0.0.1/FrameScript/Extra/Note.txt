@@ -1,112 +1,44 @@
+FrameScript: Terminal Access Point
+
 Bracket: Begin
 Initial <- Title
 Session <- Name
 Rate <- Form
+
+Appendix: Watch
+Routine <- Stack
+Schedule <- Queue
+Service <- Graph
 
 Assistance: Ethic
 Support <- Search
 About <- Overview
 Help <- Definition
 
-Core: Code
-Menu <- Option
-View <- Console
-Data <- Slip
-
-Feature: Net
-Administration <- System
-Report <- Calendar
-Blog <- Tile
-
-Framework: Bank
-Instance <- Log
-Server <- Host
-Client <- Agent
-
-Module: Matter
-Math <- Arithmetic
-Memory <- Static
-Terminal <- Application
-
-Package: Work
-Plugin <- Seed
-Addon <- Theme
-Extension <- Test
-
-Storage: Space
-Directory <- Channel
-Mount <- Port
-Database <- Grid
-
-Cycle: Random
-Date <- Dice
-Time <- Zone
-Clock <- Lock
-
-Interface: Assembly
-Language <- Compile
-Contact <- Contract
-Address <- Chain
-
 Catalogue: Part
 Tree <- Peer
 Check <- List
 Dash <- Box
-
-Track: Set
-Source <- Object
-Trace <- Asset
-History <- Scroll
-
-Model: Intercept
-Role <- Slab
-Entity <- Default
-Specimen <- New
-
-Order: Area
-Detail <- Section
-Information <- Segment
-Description <- Division
-
-Structure: Element
-Subject <- Category
-Class <- Group
-Chapter <- Node
-
-Program: Centre
-Dimension <- Project
-Content <- Media
-Event <- Action
-
-Step: Story
-Format <- Previous
-Item <- Present
-Issue <- Next
-
-Diary: Album
-Pin <- Message
-Push <- Board
-Pull <- Task
-
-Instrument: Tool
-Device <- Frequency
-Pay <- Charge
-Basic <- Signal
-
-Pool: Hook
-Main <- Account
-Card <- Register
-Serial <- Book
 
 Control: Document
 Factor <- Key
 Publish <- Volume
 Release <- Version
 
-Platform: Machine
-Scale <- Configuration
-Environment <- Operation
-Formula <- Setting
+Core: Code
+Menu <- Option
+View <- Console
+Data <- Slip
+
+Cycle: Random
+Date <- Dice
+Time <- Zone
+Clock <- Lock
+
+Diary: Album
+Pin <- Message
+Push <- Board
+Pull <- Task
 
 Exchange: Logarithm
 Query <- Convert
@@ -118,20 +50,90 @@ Algorithm <- Compression
 Security <- Synchronisation
 Symbol <- Transaction
 
-Appendix: Watch
-Routine <- Stack
-Schedule <- Queue
-Service <- Graph
+Feature: Net
+Administration <- System
+Report <- Calendar
+Blog <- Tile
+
+Framework: Bank
+Instance <- Log
+Server <- Host
+Client <- Agent
+
+Index: Chart
+Series <- Ticket
+Thread <- Coupon
+Relay <- Mail
+
+Instrument: Tool
+Device <- Frequency
+Pay <- Charge
+Basic <- Signal
+
+Interface: Assembly
+Language <- Compile
+Contact <- Contract
+Address <- Chain
+
+Model: Intercept
+Role <- Slab
+Entity <- Default
+Specimen <- New
+
+Module: Matter
+Math <- Arithmetic
+Memory <- Static
+Terminal <- Application
+
+Order: Area
+Detail <- Section
+Information <- Segment
+Description <- Division
+
+Package: Work
+Plugin <- Seed
+Addon <- Theme
+Extension <- Test
+
+Platform: Machine
+Scale <- Configuration
+Environment <- Operation
+Formula <- Setting
+
+Pool: Hook
+Main <- Account
+Card <- Register
+Serial <- Book
 
 Power: Edit
 Flag <- Point
 Result <- Value
 Return <- Score
 
-Index: Chart
-Series <- Ticket
-Thread <- Coupon
-Relay <- Mail
+Program: Centre
+Dimension <- Project
+Content <- Media
+Event <- Action
+
+Step: Story
+Format <- Previous
+Item <- Present
+Issue <- Next
+
+Storage: Space
+Directory <- Channel
+Mount <- Port
+Database <- Grid
+
+Structure: Element
+Subject <- Category
+Class <- Group
+Chapter <- Node
+
+Track: Set
+Source <- Object
+Trace <- Asset
+History <- Scroll
 
 Matrix: Away
 Type <- Identity
