@@ -1,39 +1,78 @@
 Bracket: Begin
-Initial<-Title
-Session<-Name
-Rate<-Form
+Initial <- Title
+Session <- Name
+Rate <- Form
 
 Matrix: Away
-Type<-Identity
-Rank<-Profile
-Band<-Link
+Type <- Identity
+Rank <- Profile
+Band <- Link
+
+Assistance: Ethic
+Support <- Search
+About <- Overview
+Help <- Definition
+
+Core: Code
+Menu <- Option
+View <- Console
+Data <- Slip
+
+Feature: Net
+Administration <- System
+Report <- Calendar
+Blog <- Tile
+
+Framework: Bank
+Instance <- Log
+Server <- Host
+Client <- Agent
+
+Module: Matter
+Math <- Arithmetic
+Memory <- Static
+Terminal <- Application
+
+Package: Work
+Plugin <- Seed
+Addon <- Theme
+Extension <- Test
+
+Storage: Space
+Directory <- Channel
+Mount <- Port
+Database <- Grid
 
 Cycle: Random
-Date<-Dice
-Time<-Zone
-Clock<-Lock
+Date <- Dice
+Time <- Zone
+Clock <- Lock
 
 Interface: Assembly
-Language<-Compile
-Contact<-Contract
-Address<-Chain
+Language <- Compile
+Contact <- Contract
+Address <- Chain
 
 Catalogue: Part
-Tree<-Peer
-Check<-List
-Dash<-Box
+Tree <- Peer
+Check <- List
+Dash <- Box
 
 Track: Set
-Source<-Object
-Trace<-Asset
-History<-Scroll
+Source <- Object
+Trace <- Asset
+History <- Scroll
 
 Model: Intercept
-Role<-Slab
-Entity<-Default
-Specimen<-New
+Role <- Slab
+Entity <- Default
+Specimen <- New
 
 Order: Area
-Detail<-Section
-Information<-Segment
-Description<-Division
+Detail <- Section
+Information <- Segment
+Description <- Division
+
+-------
+Memory <- Static, Dynamic, Quant
+-------
