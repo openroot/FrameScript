@@ -1,0 +1,39 @@
+Bracket: Begin
+Initial<-Title
+Session<-Name
+Rate<-Form
+
+Matrix: Away
+Type<-Identity
+Rank<-Profile
+Band<-Link
+
+Cycle: Random
+Date<-Dice
+Time<-Zone
+Clock<-Lock
+
+Interface: Assembly
+Language<-Compile
+Contact<-Contract
+Address<-Chain
+
+Catalogue: Part
+Tree<-Peer
+Check<-List
+Dash<-Box
+
+Track: Set
+Source<-Object
+Trace<-Asset
+History<-Scroll
+
+Model: Intercept
+Role<-Slab
+Entity<-Default
+Specimen<-New
+
+Order: Area
+Detail<-Section
+Information<-Segment
+Description<-Division
