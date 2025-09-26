@@ -3,11 +3,6 @@ Initial <- Title
 Session <- Name
 Rate <- Form
 
-Matrix: Away
-Type <- Identity
-Rank <- Profile
-Band <- Link
-
 Assistance: Ethic
 Support <- Search
 About <- Overview
@@ -74,69 +69,74 @@ Information <- Segment
 Description <- Division
 
 Structure: Element
-Category <- Subject
-Group <- Class
-Node <- Chapter
+Subject <- Category
+Class <- Group
+Chapter <- Node
 
 Program: Centre
-Project <- Dimension
-Media <- Content
-Action <- Event
+Dimension <- Project
+Content <- Media
+Event <- Action
 
 Step: Story
-Previous <- Format
-Present <- Item
-Next <- Issue
+Format <- Previous
+Item <- Present
+Issue <- Next
 
 Diary: Album
-Message <- Pin
-Board <- Push
-Task <- Pull
+Pin <- Message
+Push <- Board
+Pull <- Task
 
 Instrument: Tool
-Frequency <- Device
-Charge <- Pay
-Signal <- Basic
+Device <- Frequency
+Pay <- Charge
+Basic <- Signal
 
 Pool: Hook
-Account <- Main
-Register <- Card
-Book <- Serial
+Main <- Account
+Card <- Register
+Serial <- Book
 
 Control: Document
-Key <- Factor
-Volume <- Publish
-Version <- Release
+Factor <- Key
+Publish <- Volume
+Release <- Version
 
 Platform: Machine
-Configuration <- Scale
-Operation <- Environment
-Setting <- Formula
+Scale <- Configuration
+Environment <- Operation
+Formula <- Setting
 
 Exchange: Logarithm
-Convert <- Query
-Export <- Archive
-Import <- Sequence
+Query <- Convert
+Archive <- Export
+Sequence <- Import
 
 Expression: Pair
-Compression <- Algorithm
-Synchronisation <- Security
-Transaction <- Symbol
+Algorithm <- Compression
+Security <- Synchronisation
+Symbol <- Transaction
 
 Appendix: Watch
-Stack <- Routine
-Queue <- Schedule
-Graph <- Service
+Routine <- Stack
+Schedule <- Queue
+Service <- Graph
 
 Power: Edit
-Point <- Flag
-Value <- Result
-Score <- Return
+Flag <- Point
+Result <- Value
+Return <- Score
 
 Index: Chart
-Ticket <- Series
-Coupon <- Thread
-Mail <- Relay
+Series <- Ticket
+Thread <- Coupon
+Relay <- Mail
+
+Matrix: Away
+Type <- Identity
+Rank <- Profile
+Band <- Link
 
 -------
 Memory <- Static, Dynamic, Quant
