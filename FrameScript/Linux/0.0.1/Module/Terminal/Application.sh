@@ -36,7 +36,7 @@ function FrameScript.Terminal.Application.construct() {
 # FrameScript.Terminal.Application.initiate
 # Output: <string> Initiation message.
 function FrameScript.Terminal.Application.initiate() {
-	declare -r welcomeMessage="${FrameScript["textStyle,backgroundBlue"]} FrameScript ${FrameScript["textStyle,reset"]}${FrameScript["textStyle,overlinedForegroundBlue"]} Terminal Access Point${FrameScript["textStyle,reset"]}";
+	declare -r welcomeMessage="${FrameScript["textStyle,backgroundBlue"]} ${FrameScript["application,name"]} ${FrameScript["textStyle,reset"]}${FrameScript["textStyle,overlinedForegroundBlue"]} ${FrameScript["application,description"]}${FrameScript["textStyle,reset"]}";
 	echo -en "${welcomeMessage}";
 	echo -e "\n\n";
 	FrameScript.Terminal.Application.information;
@@ -50,6 +50,8 @@ function FrameScript.Terminal.Application.information() {
 	FrameScript["terminal,rows"]=$(tput lines);
 	FrameScript["terminal,columns"]=$(tput cols);
 	echo -e " ${FrameScript["application,name"]} Information:";
+	echo -e "  - Name: ${FrameScript["application,name"]}";
+	echo -e "  - Description: ${FrameScript["application,description"]}";
 	echo -e "  - Default Shell: ${FrameScript["terminal,defaultShell"]}";
 	echo -e "  - Terminal Type: ${FrameScript["terminal,type"]}";
 	echo -e "  - Bash Version: ${FrameScript["terminal,bashVersion"]}";

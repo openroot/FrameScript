@@ -12,6 +12,7 @@ fi
 
 declare -A FrameScript;
 FrameScript["application,name"]="FrameScript";
+FrameScript["application,description"]="Terminal Access Point";
 FrameScript["application,environment"]="Linux";
 FrameScript["application,version"]="0.0.1";
 FrameScript["application,absolutePath,rootScript"]="$(realpath "${BASH_SOURCE[0]}")";
