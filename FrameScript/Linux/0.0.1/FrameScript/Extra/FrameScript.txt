@@ -44,12 +44,16 @@
 	::.	Tube
 		1.	Cast
 4.	Control: Document
+	..	Draft
+		1.	Note
 	1.	Factor
 		1.	Key
 	2.	Publish
 		1.	Volume
 	3.	Release
 		1.	Version
+	::.	Memo
+		1.	Page
 5.	Core: Code
 	1.	Menu
 		1.	Option
@@ -177,12 +181,16 @@
 	3.	Event
 		1.	Action
 23.	Step: Story
+	..	Remote
+		1.	Switch
 	1.	Format
 		1.	Previous
 	2.	Item
 		1.	Present
 	3.	Issue
 		1.	Next
+	::.	Local
+		1.	State
 24.	Storage: Space
 	..	Backup
 		1.	Extra
