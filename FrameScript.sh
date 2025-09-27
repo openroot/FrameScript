@@ -64,7 +64,7 @@ function FrameScript.execute() {
 			;;
 			1)
 				declare rsyncSourceDirectory="/media/openroot/ProjectSpring53/ProjectSpring53";
-				declare rsyncDestinationDirectory="/media/openroot/OriginalStore53/--additional/--rsync/--backup";
+				declare rsyncDestinationDirectory="/media/openroot/OriginalStore53/--additional/--rsync/Backup";
 				if [[ -d "${rsyncSourceDirectory}" && -d "${rsyncDestinationDirectory}" ]]; then
 					echo -e "${FrameScript["textStyle,foregroundGreen"]} rsync from ${rsyncSourceDirectory} to ${rsyncDestinationDirectory} is started. ${FrameScript["textStyle,reset"]}\n";
 					rsync -av --delete "${rsyncSourceDirectory}" "${rsyncDestinationDirectory}";
