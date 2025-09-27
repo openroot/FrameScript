@@ -17,22 +17,22 @@ source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Math/
 # FrameScript.Module.Terminal.Application.construct
 # Output: <void> No output.
 function FrameScript.Module.Terminal.Application.construct() {
-	FrameScript["cli,argument,count"]=${2};
-	FrameScript["cli,argument,allValues"]="${3}";
 	FrameScript["terminal,defaultShell"]="${SHELL}";
 	FrameScript["terminal,type"]="${TERM}";
 	FrameScript["terminal,bashVersion"]="${BASH_VERSINFO}";
-	FrameScript["terminal,rootScript"]="$(basename "${1}")";
 	FrameScript["terminal,rows"]=$(tput lines);
 	FrameScript["terminal,columns"]=$(tput cols);
 	FrameScript["terminal,hostname"]="${HOSTNAME}";
 	FrameScript["terminal,user"]="${USER}";
+	FrameScript["application,rootScript"]="$(basename "${1}")";
+	FrameScript["application,cli,argument,count"]=${2};
+	FrameScript["application,cli,argument,allValues"]="${3}";
 	FrameScript.Module.Memory.Static.construct;
 	FrameScript.Module.Memory.Quant.construct;
 	FrameScript.Module.Terminal.Application.initiate;
 }
 
-# Initialization
+# Initialisation
 # FrameScript.Module.Terminal.Application.initiate
 # Output: <string> Initiation message.
 function FrameScript.Module.Terminal.Application.initiate() {
@@ -55,13 +55,13 @@ function FrameScript.Module.Terminal.Application.information() {
 	echo -e "  - Default Shell: ${FrameScript["terminal,defaultShell"]}";
 	echo -e "  - Terminal Type: ${FrameScript["terminal,type"]}";
 	echo -e "  - Bash Version: ${FrameScript["terminal,bashVersion"]}";
-	echo -e "  - Root Script: ${FrameScript["terminal,rootScript"]}";
 	echo -e "  - Terminal Size: ${FrameScript["terminal,rows"]} rows x ${FrameScript["terminal,columns"]} columns";
 	echo -e "  - Hostname: ${FrameScript["terminal,hostname"]}";
 	echo -e "  - User: ${FrameScript["terminal,user"]}";
-	echo -e "  - CLI Arguments: ${FrameScript["cli,argument,count"]} argument(s) passed";
-	if [[ ${FrameScript["cli,argument,count"]} -gt 0 ]]; then
-		echo -e "    - All Values: ${FrameScript["cli,argument,allValues"]}";
+	echo -e "  - Root Script: ${FrameScript["application,rootScript"]}";
+	echo -e "  - CLI Arguments: ${FrameScript["application,cli,argument,count"]} argument(s) passed";
+	if [[ ${FrameScript["application,cli,argument,count"]} -gt 0 ]]; then
+		echo -e "    - All Values: ${FrameScript["application,cli,argument,allValues"]}";
 	fi
 }
 

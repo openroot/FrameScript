@@ -12,7 +12,7 @@ function FrameScript.Module.Memory.Static.construct() {
 	FrameScript.Module.Memory.Static.textStyle;
 }
 
-# Textstyle with ANSI escape code
+# Text-style with ANSI escape code
 # FrameScript.Module.Memory.Static.textStyle
 # Output: <void> No output.
 function FrameScript.Module.Memory.Static.textStyle() {
