@@ -1,11 +1,15 @@
 *	FrameScript: Terminal Access Point
 ..	Bracket: Begin
+	..	Serialisation
+		1.	Hash
 	1.	Initial
 		1.	Title
 	2.	Session
 		1.	Name
 	3.	Rate
 		1.	Form
+	::.	Deserialisation
+		1.	Tag
 1.	Appendix: Watch
 	1.	Routine
 		1.	Stack
@@ -189,9 +193,13 @@
 	3.	History
 		1.	Scroll
 ::.	Matrix: Away
+	..	Encryption
+		1.	Certificate
 	1.	Type
 		1.	Identity
 	2.	Rank
 		1.	Profile
 	3.	Band
 		1.	Link
+	::.	Decryption
+		1.	Signature
