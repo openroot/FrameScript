@@ -11,19 +11,27 @@
 	::.	Deserialisation
 		1.	Tag
 1.	Appendix: Watch
+	..	Schema
+		1.	Template
 	1.	Routine
 		1.	Stack
 	2.	Schedule
 		1.	Queue
 	3.	Service
 		1.	Graph
+	::.	Engine
+		1.	Route
 2.	Assistance: Ethic
+	..	Mode
+		1.	Screen
 	1.	Support
 		1.	Search
 	2.	About
 		1.	Overview
 	3.	Help
 		1.	Definition
+	::.	Status
+		1.	Tip
 3.	Catalogue: Part
 	1.	Tree
 		1.	Peer
@@ -179,19 +187,27 @@
 	3.	Database
 		1.	Grid
 25.	Structure: Element
+	..	Cyber
+		1.	Token
 	1.	Subject
 		1.	Category
 	2.	Class
 		1.	Group
 	3.	Chapter
 		1.	Node
+	::.	Web
+		1.	Mark
 26.	Track: Set
+	..	Network
+		1.	Socket
 	1.	Source
 		1.	Object
 	2.	Trace
 		1.	Asset
 	3.	History
 		1.	Scroll
+	::.	Credential
+		1.	Unit
 ::.	Matrix: Away
 	..	Encryption
 		1.	Certificate
