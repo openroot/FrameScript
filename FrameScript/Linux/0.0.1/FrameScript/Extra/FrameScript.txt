@@ -33,12 +33,16 @@
 	::.	Status
 		1.	Tip
 3.	Catalogue: Part
+	..	Cluster
+		1.	Cell
 	1.	Tree
 		1.	Peer
 	2.	Check
 		1.	List
 	3.	Dash
 		1.	Box
+	::.	Tube
+		1.	Cast
 4.	Control: Document
 	1.	Factor
 		1.	Key
@@ -180,12 +184,16 @@
 	3.	Issue
 		1.	Next
 24.	Storage: Space
+	..	Backup
+		1.	Extra
 	1.	Directory
 		1.	Channel
 	2.	Mount
 		1.	Port
 	3.	Database
 		1.	Grid
+	::.	Swap
+		1.	Temporary
 25.	Structure: Element
 	..	Cyber
 		1.	Token
