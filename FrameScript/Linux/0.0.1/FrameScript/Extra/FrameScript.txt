@@ -55,26 +55,38 @@
 	::.	Memo
 		1.	Page
 5.	Core: Code
+	..	Dock
+		1.	Meta
 	1.	Menu
 		1.	Option
 	2.	View
 		1.	Console
 	3.	Data
 		1.	Slip
+	::.	Label
+		1.	Command
 6.	Cycle: Random
+	..	Range
+		1.	Layer
 	1.	Date
 		1.	Dice
 	2.	Time
 		1.	Zone
 	3.	Clock
 		1.	Lock
+	::.	Phase
+		1.	Poll
 7.	Diary: Album
+	..	Terminology
+		1.	Policy
 	1.	Pin
 		1.	Message
 	2.	Push
 		1.	Board
 	3.	Pull
 		1.	Task
+	::.	Authorisation
+		1.	Permission
 8.	Exchange: Logarithm
 	1.	Query
 		1.	Convert
@@ -160,26 +172,38 @@
 	3.	Formula
 		1.	Setting
 20.	Pool: Hook
+	..	Evalution
+		1.	Top
 	1.	Main
 		1.	Account
 	2.	Card
 		1.	Register
 	3.	Serial
 		1.	Book
+	..	Execution
+		1.	Batch
 21.	Power: Edit
+	..	Pre
+		1.	Coin
 	1.	Flag
 		1.	Point
 	2.	Result
 		1.	Value
 	3.	Return
 		1.	Score
+	::.	Post
+		1.	
 22.	Program: Centre
+	..	Component
+		1.	Standard
 	1.	Dimension
 		1.	Project
 	2.	Content
 		1.	Media
 	3.	Event
 		1.	Action
+	::.	Edition
+		1.	Generation
 23.	Step: Story
 	..	Remote
 		1.	Switch
