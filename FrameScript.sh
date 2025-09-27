@@ -34,7 +34,7 @@ source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Termi
 # Output: <void> No output.
 function FrameScript.construct() {
 	clear;
-	FrameScript.Terminal.Application.construct "${1}" ${2} "${3}";
+	FrameScript.Module.Terminal.Application.construct "${1}" ${2} "${3}";
 	echo -e "\n";
 }
 
@@ -85,7 +85,7 @@ function FrameScript.execute() {
 				FrameScript.sample;
 			;;
 			5)
-				FrameScript.Terminal.Application.information;
+				FrameScript.Module.Terminal.Application.information;
 			;;
 			*)
 				echo "Unknown option";
@@ -102,7 +102,7 @@ function FrameScript.execute() {
 # Output: <string> FrameScript samples.
 function FrameScript.sample() {
 	echo -e "${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} sampling is started. ${FrameScript["textStyle,reset"]}\n";
-	FrameScript.Math.Arithmetic.sample;
+	FrameScript.Module.Math.Arithmetic.sample;
 	echo -e "\n${FrameScript["textStyle,backgroundGreen"]} ${FrameScript["application,name"]} sampling is completed. ${FrameScript["textStyle,reset"]}";
 }
 

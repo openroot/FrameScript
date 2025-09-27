@@ -14,9 +14,9 @@ source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Math/
 # region Application
 
 # Constructor
-# FrameScript.Terminal.Application.construct
+# FrameScript.Module.Terminal.Application.construct
 # Output: <void> No output.
-function FrameScript.Terminal.Application.construct() {
+function FrameScript.Module.Terminal.Application.construct() {
 	FrameScript["cli,argument,count"]=${2};
 	FrameScript["cli,argument,allValues"]="${3}";
 	FrameScript["terminal,defaultShell"]="${SHELL}";
@@ -27,26 +27,26 @@ function FrameScript.Terminal.Application.construct() {
 	FrameScript["terminal,columns"]=$(tput cols);
 	FrameScript["terminal,hostname"]="${HOSTNAME}";
 	FrameScript["terminal,user"]="${USER}";
-	FrameScript.Memory.Static.construct;
-	FrameScript.Memory.Quant.construct;
-	FrameScript.Terminal.Application.initiate;
+	FrameScript.Module.Memory.Static.construct;
+	FrameScript.Module.Memory.Quant.construct;
+	FrameScript.Module.Terminal.Application.initiate;
 }
 
 # Initialization
-# FrameScript.Terminal.Application.initiate
+# FrameScript.Module.Terminal.Application.initiate
 # Output: <string> Initiation message.
-function FrameScript.Terminal.Application.initiate() {
+function FrameScript.Module.Terminal.Application.initiate() {
 	declare -r welcomeMessage="${FrameScript["textStyle,backgroundBlue"]} ${FrameScript["application,name"]} ${FrameScript["textStyle,reset"]}${FrameScript["textStyle,overlinedForegroundBlue"]} ${FrameScript["application,description"]}${FrameScript["textStyle,reset"]}";
 	echo -en "${welcomeMessage}";
 	echo -e "\n\n";
-	FrameScript.Terminal.Application.information;
+	FrameScript.Module.Terminal.Application.information;
 	echo -e "\n\n\n";
 }
 
 # Detailed information
-# FrameScript.Terminal.Application.information
+# FrameScript.Module.Terminal.Application.information
 # Output: <string> About application.
-function FrameScript.Terminal.Application.information() {
+function FrameScript.Module.Terminal.Application.information() {
 	FrameScript["terminal,rows"]=$(tput lines);
 	FrameScript["terminal,columns"]=$(tput cols);
 	echo -e " ${FrameScript["application,name"]} Information:";

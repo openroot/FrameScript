@@ -6,9 +6,9 @@
 # region Tile
 
 # Constructor
-# FrameScript.Blog.Tile.construct
+# FrameScript.Feature.Blog.Tile.construct
 # Output: <void> No output.
-function FrameScript.Blog.Tile.construct() {
+function FrameScript.Feature.Blog.Tile.construct() {
 	echo -n;
 }
 

@@ -6,16 +6,16 @@
 # region Quant
 
 # Constructor
-# FrameScript.Memory.Quant.construct
+# FrameScript.Module.Memory.Quant.construct
 # Output: <void> No output.
-function FrameScript.Memory.Quant.construct() {
-	FrameScript.Memory.Quant.englishLetter;
+function FrameScript.Module.Memory.Quant.construct() {
+	FrameScript.Module.Memory.Quant.englishLetter;
 }
 
 # English letter with decimal code
-# FrameScript.Memory.Quant.englishLetter
+# FrameScript.Module.Memory.Quant.englishLetter
 # Output: <void> No output.
-function FrameScript.Memory.Quant.englishLetter() {
+function FrameScript.Module.Memory.Quant.englishLetter() {
 	FrameScript["englishLetter,a"]=3;
 	FrameScript["englishLetter,b"]=2;
 	FrameScript["englishLetter,c"]=3;
@@ -71,9 +71,9 @@ function FrameScript.Memory.Quant.englishLetter() {
 }
 
 # Display English letter with decimal code
-# FrameScript.Memory.Quant.displayEnglishLetter
+# FrameScript.Module.Memory.Quant.displayEnglishLetter
 # Output: <string> English letter decimal code.
-function FrameScript.Memory.Quant.displayEnglishLetter() {
+function FrameScript.Module.Memory.Quant.displayEnglishLetter() {
 	for letter in {a..z} {A..Z}; do
 		echo "${letter}: ${FrameScript["englishLetter,${letter}"]}";
 	done

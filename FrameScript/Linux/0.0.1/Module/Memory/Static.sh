@@ -6,16 +6,16 @@
 # region Static
 
 # Constructor
-# FrameScript.Memory.Static.construct
+# FrameScript.Module.Memory.Static.construct
 # Output: <void> No output.
-function FrameScript.Memory.Static.construct() {
-	FrameScript.Memory.Static.textStyle;
+function FrameScript.Module.Memory.Static.construct() {
+	FrameScript.Module.Memory.Static.textStyle;
 }
 
 # Textstyle with ANSI escape code
-# FrameScript.Memory.Static.textStyle
+# FrameScript.Module.Memory.Static.textStyle
 # Output: <void> No output.
-function FrameScript.Memory.Static.textStyle() {
+function FrameScript.Module.Memory.Static.textStyle() {
 	# Default
 	FrameScript["textStyle,reset"]='\033[0m';
 	FrameScript["textStyle,bold"]='\033[1m';
