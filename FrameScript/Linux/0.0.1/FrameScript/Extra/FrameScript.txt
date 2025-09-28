@@ -110,8 +110,8 @@
 	::.	Write
 		1.	Stream
 10.	Feature: Net
-	..	
-		1.	
+	..	Display
+		1.	Show
 	1.	Administration
 		1.	System
 	2.	Report
@@ -163,16 +163,16 @@
 	3.	Terminal
 		1.	Application
 17.	Order: Area
-	..	
-		1.	
+	..	Pattern
+		1.	Block
 	1.	Detail
 		1.	Section
 	2.	Information
 		1.	Segment
 	3.	Description
 		1.	Division
-	::.	
-		1.	
+	::.	Paragraph
+		1.	Period
 18.	Package: Work
 	..	Library
 		1.	Case
