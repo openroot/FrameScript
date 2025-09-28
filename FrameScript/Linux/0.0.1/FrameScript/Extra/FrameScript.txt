@@ -88,34 +88,38 @@
 	::.	Authorisation
 		1.	Permission
 8.	Exchange: Logarithm
-	..	
-		1.	
+	..	Limit
+		1.	Maximum
 	1.	Query
 		1.	Convert
 	2.	Archive
 		1.	Export
 	3.	Sequence
 		1.	Import
-	::.	
-		1.	
+	::.	Macro
+		1.	Minimum
 9.	Expression: Pair
-	..	
-		1.	
+	..	Read
+		1.	Clone
 	1.	Algorithm
 		1.	Compression
 	2.	Security
 		1.	Synchronisation
 	3.	Symbol
 		1.	Transaction
-	::.	
-		1.	
+	::.	Write
+		1.	Stream
 10.	Feature: Net
+	..	
+		1.	
 	1.	Administration
 		1.	System
 	2.	Report
 		1.	Calendar
 	3.	Blog
 		1.	Tile
+	::.	Utility
+		1.	Map
 11.	Framework: Bank
 	1.	Instance
 		1.	Log
@@ -159,34 +163,38 @@
 	3.	Terminal
 		1.	Application
 17.	Order: Area
+	..	
+		1.	
 	1.	Detail
 		1.	Section
 	2.	Information
 		1.	Segment
 	3.	Description
 		1.	Division
-18.	Package: Work
-	..	
+	::.	
 		1.	
+18.	Package: Work
+	..	Library
+		1.	Case
 	1.	Plugin
 		1.	Seed
 	2.	Addon
 		1.	Theme
 	3.	Extension
 		1.	Test
-	::.	
-		1.	
+	::.	Lap
+		1.	Prototype
 19.	Platform: Machine
-	..	
-		1.	
+	..	Cloud
+		1.	Origin
 	1.	Scale
 		1.	Configuration
 	2.	Environment
 		1.	Operation
 	3.	Formula
 		1.	Setting
-	::.	
-		1.	
+	::.	Repository
+		1.	Branch
 20.	Pool: Hook
 	..	Evalution
 		1.	Top
@@ -196,7 +204,7 @@
 		1.	Register
 	3.	Serial
 		1.	Book
-	..	Execution
+	::.	Execution
 		1.	Batch
 21.	Power: Edit
 	..	Pre
@@ -208,7 +216,7 @@
 	3.	Return
 		1.	Score
 	::.	Post
-		1.	
+		1.	Dot
 22.	Program: Centre
 	..	Component
 		1.	Standard
