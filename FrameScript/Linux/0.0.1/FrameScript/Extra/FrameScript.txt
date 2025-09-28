@@ -88,12 +88,16 @@
 	::.	Authorisation
 		1.	Permission
 8.	Exchange: Logarithm
+	..	
+		1.	
 	1.	Query
 		1.	Convert
 	2.	Archive
 		1.	Export
 	3.	Sequence
 		1.	Import
+	::.	
+		1.	
 9.	Expression: Pair
 	1.	Algorithm
 		1.	Compression
@@ -165,12 +169,16 @@
 	3.	Extension
 		1.	Test
 19.	Platform: Machine
+	..	
+		1.	
 	1.	Scale
 		1.	Configuration
 	2.	Environment
 		1.	Operation
 	3.	Formula
 		1.	Setting
+	::.	
+		1.	
 20.	Pool: Hook
 	..	Evalution
 		1.	Top

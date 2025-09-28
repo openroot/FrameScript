@@ -20,8 +20,7 @@ function FrameScript.Module.Terminal.Application.construct() {
 	FrameScript["terminal,defaultShell"]="${SHELL}";
 	FrameScript["terminal,type"]="${TERM}";
 	FrameScript["terminal,bashVersion"]="${BASH_VERSINFO}";
-	FrameScript["terminal,rows"]=$(tput lines);
-	FrameScript["terminal,columns"]=$(tput cols);
+	read FrameScript["terminal,rows"] FrameScript["terminal,columns"] < <(stty size);
 	FrameScript["terminal,hostname"]="${HOSTNAME}";
 	FrameScript["terminal,user"]="${USER}";
 	FrameScript["application,rootScript"]="$(basename "${1}")";
@@ -47,8 +46,7 @@ function FrameScript.Module.Terminal.Application.initiate() {
 # FrameScript.Module.Terminal.Application.information
 # Output: <string> About application.
 function FrameScript.Module.Terminal.Application.information() {
-	FrameScript["terminal,rows"]=$(tput lines);
-	FrameScript["terminal,columns"]=$(tput cols);
+	read FrameScript["terminal,rows"] FrameScript["terminal,columns"] < <(stty size);
 	echo -e " ${FrameScript["application,name"]} Information:";
 	echo -e "  - Name: ${FrameScript["application,name"]}";
 	echo -e "  - Description: ${FrameScript["application,description"]}";
