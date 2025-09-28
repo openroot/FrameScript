@@ -121,71 +121,71 @@
 	::.	Utility
 		1.	Map
 11.	Framework: Bank
-	..	
-		1.	
+	..	Parent
+		1.	Resource
 	1.	Instance
 		1.	Log
 	2.	Server
 		1.	Host
 	3.	Client
 		1.	Agent
-	::.	
-		1.	
+	::.	Child
+		1.	Function
 12.	Index: Chart
-	..	
-		1.	
+	..	Property
+		1.	Debit
 	1.	Series
 		1.	Ticket
 	2.	Thread
 		1.	Coupon
 	3.	Relay
 		1.	Mail
-	::.	
-		1.	
+	::.	Attribute
+		1.	Credit
 13.	Instrument: Tool
-	..	
-		1.	
+	..	String
+		1.	Array
 	1.	Device
 		1.	Frequency
 	2.	Pay
 		1.	Charge
 	3.	Basic
 		1.	Signal
-	::.	
-		1.	
+	::.	Inventory
+		1.	Product
 14.	Interface: Assembly
-	..	
-		1.	
+	..	Threshold
+		1.	Syntax
 	1.	Language
 		1.	Compile
 	2.	Contact
 		1.	Contract
 	3.	Address
 		1.	Chain
-	::.	
-		1.	
+	::.	Dictionary
+		1.	Thesaurus
 15.	Model: Intercept
-	..	
-		1.	
+	..	Table
+		1.	Head
 	1.	Role
 		1.	Slab
 	2.	Entity
 		1.	Default
 	3.	Specimen
 		1.	New
-	::.	
-		1.	
+	::.	Sample
+		1.	Star
 16.	Module: Matter
-	..	
-		1.	
+	..	Input
+		1.	Buffer
 	1.	Math
 		1.	Arithmetic
 	2.	Memory
 		1.	Static
 	3.	Terminal
 		1.	Application
-	::.	
-		1.	
+	::.	Output
+		1.	Scope
 17.	Order: Area
 	..	Pattern
 		1.	Block
@@ -220,7 +220,7 @@
 	::.	Repository
 		1.	Branch
 20.	Pool: Hook
-	..	Evalution
+	..	Evaluation
 		1.	Top
 	1.	Main
 		1.	Account
