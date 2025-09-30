@@ -43,7 +43,7 @@ function FrameScript.construct() {
 # Output: <string> Executional value.
 function FrameScript.execute() {
 	declare t1=-1;
-	declare t2=" ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = rsync | 2 = Two | 3 = Three | 4 = Sample | 5 = Information ${FrameScript["textStyle,reset"]}";
+	declare t2=" ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = One | 2 = Two | 3 = Three | 4 = Sample | 5 = Information ${FrameScript["textStyle,reset"]}";
 	declare t3="Please enter option [0|1|2|3|4|5]: ";
 	while :
 	do
@@ -63,17 +63,7 @@ function FrameScript.execute() {
 				break;
 			;;
 			1)
-				declare rsyncSourceDirectory="/media/openroot/ProjectSpring53/ProjectSpring53";
-				declare rsyncDestinationDirectory="/media/openroot/OriginalStore53/--additional/--rsync/Backup";
-				if [[ -d "${rsyncSourceDirectory}" && -d "${rsyncDestinationDirectory}" ]]; then
-					echo -e "${FrameScript["textStyle,foregroundGreen"]} rsync from ${rsyncSourceDirectory} to ${rsyncDestinationDirectory} is started. ${FrameScript["textStyle,reset"]}\n";
-					rsync -av --delete "${rsyncSourceDirectory}" "${rsyncDestinationDirectory}";
-					echo -e "\n${FrameScript["textStyle,foregroundGreen"]} rsync from ${rsyncSourceDirectory} to ${rsyncDestinationDirectory} is completed. ${FrameScript["textStyle,reset"]}";
-				else
-					echo -e "${FrameScript["textStyle,foregroundRed"]} Source or Destination directory does not exist for rsync. ${FrameScript["textStyle,reset"]}";
-					echo -e "  - Source: ${rsyncSourceDirectory}";
-					echo -e "  - Destination: ${rsyncDestinationDirectory}";
-				fi
+				echo "Option 1";
 			;;
 			2)
 				echo "Option 2";
