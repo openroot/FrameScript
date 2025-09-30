@@ -5,9 +5,9 @@
 
 # region source
 
-source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Memory/Static.sh";
-source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Memory/Quant.sh";
-source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Math/Arithmetic.sh";
+source "${FrameScript["application,absolutePath,rootDirectory"]}/Module/Memory/Static.sh";
+source "${FrameScript["application,absolutePath,rootDirectory"]}/Module/Memory/Quant.sh";
+source "${FrameScript["application,absolutePath,rootDirectory"]}/Module/Math/Arithmetic.sh";
 
 # end region
 

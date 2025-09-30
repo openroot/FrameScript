@@ -17,13 +17,11 @@ FrameScript["application,environment"]="Linux";
 FrameScript["application,version"]="0.0.1";
 FrameScript["application,absolutePath,rootScript"]="$(realpath "${BASH_SOURCE[0]}")";
 FrameScript["application,absolutePath,rootDirectory"]="$(dirname "${FrameScript["application,absolutePath,rootScript"]}")";
-FrameScript["application,absolutePath,versionDirectory"]="${FrameScript["application,absolutePath,rootDirectory"]}/${FrameScript["application,name"]}/${FrameScript["application,environment"]}/${FrameScript["application,version"]}";
-
 # end region
 
 # region source
 
-source "${FrameScript["application,absolutePath,versionDirectory"]}/Module/Terminal/Application.sh";
+source "${FrameScript["application,absolutePath,rootDirectory"]}/Module/Terminal/Application.sh";
 
 # end region
 
