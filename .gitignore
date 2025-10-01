@@ -401,4 +401,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 # FrameScript
-/FrameScript/Linux/0.0.1/FrameScript/error/
+/FrameScript/Linux/0.0.1/FrameScript/error/error*.txt
