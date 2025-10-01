@@ -41,22 +41,6 @@ function FrameScript.construct() {
 	echo -e "\n";
 }
 
-# Error file management
-# FrameScript.manageErrorFile
-# Output: <void> No output.
-function FrameScript.manageErrorFile() {
-	# Create new file for errors if its size exceeds the provided limit.
-	declare errorFile="${FrameScript["application,absolutePath,errorFile"]}";
-	if [[ -f "${errorFile}" ]]; then
-		declare -i fileSize=$(stat --format="%s" "${errorFile}");
-		if [[ ${fileSize} -gt ${FrameScript["application,errorFileSizeLimit"]} ]]; then
-			declare timestamp="$(date "+%Y%m%d_%H%M%S_%6N_%Z")";
-			declare newName="${errorFile%.*}_${timestamp}.txt";
-			mv "${errorFile}" "${newName}";
-		fi
-	fi
-}
-
 # Error handling
 # FrameScript.error "<message>" <code>
 # Parameter1: <string> Error message.
@@ -78,8 +62,46 @@ function FrameScript.error() {
 # FrameScript.validateEnvironment
 # Output: <void> No output.
 function FrameScript.validateEnvironment() {
-	declare packageName="bc";
-	! dpkg -s "${packageName}" &>/dev/null && FrameScript.error 1 "Package \"${packageName}\" is not installed.";
+	FrameScript.manageLinuxPackage "bc" "curl" "neofetch";
+}
+
+# Error file management
+# FrameScript.manageErrorFile
+# Output: <void> No output.
+function FrameScript.manageErrorFile() {
+	# Create new file for errors if its size exceeds the provided limit.
+	declare errorFile="${FrameScript["application,absolutePath,errorFile"]}";
+	if [[ -f "${errorFile}" ]]; then
+		declare -i fileSize=$(stat --format="%s" "${errorFile}");
+		if [[ ${fileSize} -gt ${FrameScript["application,errorFileSizeLimit"]} ]]; then
+			declare timestamp="$(date "+%Y%m%d_%H%M%S_%6N_%Z")";
+			declare newName="${errorFile%.*}_${timestamp}.txt";
+			mv "${errorFile}" "${newName}";
+		fi
+	fi
+}
+
+# Linux package management
+# FrameScript.manageLinuxPackage "<package1>" "<package2>" ..
+# Parameter: <array> List of required packages.
+# Output: <void> No output.
+function FrameScript.manageLinuxPackage() {
+	# Check installation status for required packages.
+	declare -a requiredPackages=("${@}");
+	declare -a installedPackages=();
+	declare -a notInstalledPackages=();
+
+	for requiredPackage in "${requiredPackages[@]}"; do
+		if dpkg -s "${requiredPackage}" &>/dev/null; then
+			installedPackages+=("${requiredPackage}");
+		else
+			notInstalledPackages+=("${requiredPackage}");
+		fi
+	done
+
+	if [[ ${#notInstalledPackages[@]} -gt 0 ]]; then
+		FrameScript.error 1 "Some linux packages are missing.\nTo install missing packages, run:\nsudo apt-get install ${notInstalledPackages[@]}";
+	fi
 }
 
 # Execution
@@ -89,8 +111,7 @@ function FrameScript.execute() {
 	declare t1=-1;
 	declare t2=" ${FrameScript["textStyle,slowBlink"]}Options${FrameScript["textStyle,reset"]} ${FrameScript["textStyle,boldInverted"]} 0 = Exit | 1 = One | 2 = Two | 3 = Three | 4 = Sample | 5 = Information ${FrameScript["textStyle,reset"]}";
 	declare t3="Please enter option [0|1|2|3|4|5]: ";
-	while :
-	do
+	while :; do
 		echo -e "${t2}";
 		if [[ "${t1}" -eq -1 ]] 2>/dev/null; then
 			echo -en "${t3}";
