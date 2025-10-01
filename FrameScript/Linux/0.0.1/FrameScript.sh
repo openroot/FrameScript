@@ -17,6 +17,9 @@ FrameScript["application,environment"]="Linux";
 FrameScript["application,version"]="0.0.1";
 FrameScript["application,absolutePath,rootScript"]="$(realpath "${BASH_SOURCE[0]}")";
 FrameScript["application,absolutePath,rootDirectory"]="$(dirname "${FrameScript["application,absolutePath,rootScript"]}")";
+FrameScript["application,absolutePath,errorFile"]="${FrameScript["application,absolutePath,rootDirectory"]}/FrameScript/error/error.txt";
+FrameScript["application,errorFileSizeLimit"]=1048576; # In bytes (1 MB).
+
 # end region
 
 # region source
@@ -32,8 +35,51 @@ source "${FrameScript["application,absolutePath,rootDirectory"]}/Module/Terminal
 # Output: <void> No output.
 function FrameScript.construct() {
 	clear;
+	FrameScript.manageErrorFile;
+	FrameScript.validateEnvironment;
 	FrameScript.Module.Terminal.Application.construct "${1}" ${2} "${3}";
 	echo -e "\n";
+}
+
+# Error file management
+# FrameScript.manageErrorFile
+# Output: <void> No output.
+function FrameScript.manageErrorFile() {
+	# Create new file for errors if its size exceeds the provided limit.
+	declare errorFile="${FrameScript["application,absolutePath,errorFile"]}";
+	if [[ -f "${errorFile}" ]]; then
+		declare -i fileSize=$(stat --format="%s" "${errorFile}");
+		if [[ ${fileSize} -gt ${FrameScript["application,errorFileSizeLimit"]} ]]; then
+			declare timestamp="$(date "+%Y%m%d_%H%M%S_%6N_%Z")";
+			declare newName="${errorFile%.*}_${timestamp}.txt";
+			mv "${errorFile}" "${newName}";
+		fi
+	fi
+}
+
+# Error handling
+# FrameScript.error "<message>" <code>
+# Parameter1: <string> Error message.
+# Parameter2: <integer> Error code. 0 indicates no error.
+# Output: <string> Error message to the standard error output and stops execution.
+function FrameScript.error() {
+	declare code=${1};
+	declare message="${2}";
+	if [[ ${code} -ne 0 ]]; then
+		declare timestamp="$(date "+%A, %Y-%m-%d %H:%M:%S.%6N %Z")";
+		declare errorString="Timestamp: ${timestamp}\nCode: ${code}\nError:\n${message}\n";
+		echo -e "${errorString}" >&2;
+		echo -e "${errorString}" >> "${FrameScript["application,absolutePath,errorFile"]}";
+		exit ${code};
+	fi
+}
+
+# Environment validation
+# FrameScript.validateEnvironment
+# Output: <void> No output.
+function FrameScript.validateEnvironment() {
+	declare packageName="bc";
+	! dpkg -s "${packageName}" &>/dev/null && FrameScript.error 1 "Package \"${packageName}\" is not installed.";
 }
 
 # Execution
@@ -56,7 +102,7 @@ function FrameScript.execute() {
 		fi
 		echo -en "${t3}${operation}";
 		echo -e "\n\n";
-		case $operation in
+		case ${operation} in
 			0)
 				break;
 			;;
