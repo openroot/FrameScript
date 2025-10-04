@@ -1,13 +1,1 @@
-16.	Module: Matter
-	..	Input
-		1.	Buffer
-	1.	Math
-		1.	Arithmetic
-	2.	Memory
-		1.	Static
-		2.	Dynamic
-		3.	Quant
-	3.	Terminal
-		1.	Application
-	::.	Output
-		1.	Scope
+16.	Module	->[2.	Memory]	->[1.	Static	2.	Dynamic	3.	Quant]
