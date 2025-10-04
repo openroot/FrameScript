@@ -1,309 +1,87 @@
 *	FrameScript: Terminal Access Point
 ..	Bracket: Begin
-	..	Serialisation
-		1.	Hash
-	1.	Initial
-		1.	Title
-	2.	Session
-		1.	Name
-	3.	Rate
-		1.	Form
-	::.	Deserialisation
-		1.	Tag
 1.	Appendix: Watch
-	..	Schema
-		1.	Template
-	1.	Routine
-		1.	Stack
-	2.	Schedule
-		1.	Queue
-	3.	Service
-		1.	Graph
-	::.	Engine
-		1.	Route
 2.	Assistance: Ethic
-	..	Mode
-		1.	Screen
-	1.	Support
-		1.	Search
-	2.	About
-		1.	Overview
-	3.	Help
-		1.	Definition
-	::.	Status
-		1.	Tip
 3.	Catalogue: Part
-	..	Cluster
-		1.	Cell
-	1.	Tree
-		1.	Peer
-	2.	Check
-		1.	List
-	3.	Dash
-		1.	Box
-	::.	Tube
-		1.	Cast
 4.	Control: Document
-	..	Draft
-		1.	Note
-	1.	Factor
-		1.	Key
-	2.	Publish
-		1.	Volume
-	3.	Release
-		1.	Version
-	::.	Memo
-		1.	Page
 5.	Core: Code
-	..	Dock
-		1.	Meta
-	1.	Menu
-		1.	Option
-	2.	View
-		1.	Console
-	3.	Data
-		1.	Slip
-	::.	Label
-		1.	Command
 6.	Cycle: Random
-	..	Range
-		1.	Layer
-	1.	Date
-		1.	Dice
-	2.	Time
-		1.	Zone
-	3.	Clock
-		1.	Lock
-	::.	Phase
-		1.	Poll
 7.	Diary: Album
-	..	Terminology
-		1.	Policy
-	1.	Pin
-		1.	Message
-	2.	Push
-		1.	Board
-	3.	Pull
-		1.	Task
-	::.	Authorisation
-		1.	Permission
 8.	Exchange: Logarithm
-	..	Limit
-		1.	Maximum
-	1.	Query
-		1.	Convert
-	2.	Archive
-		1.	Export
-	3.	Sequence
-		1.	Import
-	::.	Macro
-		1.	Minimum
 9.	Expression: Pair
-	..	Read
-		1.	Clone
-	1.	Algorithm
-		1.	Compression
-	2.	Security
-		1.	Synchronisation
-	3.	Symbol
-		1.	Transaction
-	::.	Write
-		1.	Stream
 10.	Feature: Net
-	..	Display
-		1.	Show
-	1.	Administration
-		1.	System
-	2.	Report
-		1.	Calendar
-	3.	Blog
-		1.	Tile
-	::.	Utility
-		1.	Map
 11.	Framework: Bank
-	..	Parent
-		1.	Resource
-	1.	Instance
-		1.	Log
-	2.	Server
-		1.	Host
-	3.	Client
-		1.	Agent
-	::.	Child
-		1.	Function
 12.	Index: Chart
-	..	Property
-		1.	Debit
-	1.	Series
-		1.	Ticket
-	2.	Thread
-		1.	Coupon
-	3.	Relay
-		1.	Mail
-	::.	Attribute
-		1.	Credit
 13.	Instrument: Tool
-	..	String
-		1.	Array
-	1.	Device
-		1.	Frequency
-	2.	Pay
-		1.	Charge
-	3.	Basic
-		1.	Signal
-	::.	Inventory
-		1.	Product
 14.	Interface: Assembly
-	..	Threshold
-		1.	Syntax
-	1.	Language
-		1.	Compile
-	2.	Contact
-		1.	Contract
-	3.	Address
-		1.	Chain
-	::.	Dictionary
-		1.	Thesaurus
 15.	Model: Intercept
-	..	Table
-		1.	Head
-	1.	Role
-		1.	Slab
-	2.	Entity
-		1.	Default
-	3.	Specimen
-		1.	New
-	::.	Sample
-		1.	Star
 16.	Module: Matter
-	..	Input
-		1.	Buffer
-	1.	Math
-		1.	Arithmetic
-	2.	Memory
-		1.	Static
-	3.	Terminal
-		1.	Application
-	::.	Output
-		1.	Scope
 17.	Order: Area
-	..	Pattern
-		1.	Block
-	1.	Detail
-		1.	Section
-	2.	Information
-		1.	Segment
-	3.	Description
-		1.	Division
-	::.	Paragraph
-		1.	Period
 18.	Package: Work
-	..	Library
-		1.	Case
-	1.	Plugin
-		1.	Seed
-	2.	Addon
-		1.	Theme
-	3.	Extension
-		1.	Test
-	::.	Lap
-		1.	Prototype
 19.	Platform: Machine
-	..	Cloud
-		1.	Origin
-	1.	Scale
-		1.	Configuration
-	2.	Environment
-		1.	Operation
-	3.	Formula
-		1.	Setting
-	::.	Repository
-		1.	Branch
 20.	Pool: Hook
-	..	Evaluation
-		1.	Top
-	1.	Main
-		1.	Account
-	2.	Card
-		1.	Register
-	3.	Serial
-		1.	Book
-	::.	Execution
-		1.	Batch
 21.	Power: Edit
-	..	Pre
-		1.	Coin
-	1.	Flag
-		1.	Point
-	2.	Result
-		1.	Value
-	3.	Return
-		1.	Score
-	::.	Post
-		1.	Dot
 22.	Program: Centre
-	..	Component
-		1.	Standard
-	1.	Dimension
-		1.	Project
-	2.	Content
-		1.	Media
-	3.	Event
-		1.	Action
-	::.	Edition
-		1.	Generation
 23.	Step: Story
-	..	Remote
-		1.	Switch
-	1.	Format
-		1.	Previous
-	2.	Item
-		1.	Present
-	3.	Issue
-		1.	Next
-	::.	Local
-		1.	State
 24.	Storage: Space
-	..	Backup
-		1.	Extra
-	1.	Directory
-		1.	Channel
-	2.	Mount
-		1.	Port
-	3.	Database
-		1.	Grid
-	::.	Swap
-		1.	Temporary
 25.	Structure: Element
-	..	Cyber
-		1.	Token
-	1.	Subject
-		1.	Category
-	2.	Class
-		1.	Group
-	3.	Chapter
-		1.	Node
-	::.	Web
-		1.	Mark
 26.	Track: Set
-	..	Network
-		1.	Socket
-	1.	Source
-		1.	Object
-	2.	Trace
-		1.	Asset
-	3.	History
-		1.	Scroll
-	::.	Credential
-		1.	Unit
 ::.	Matrix: Away
-	..	Encryption
-		1.	Certificate
-	1.	Type
-		1.	Identity
-	2.	Rank
-		1.	Profile
-	3.	Band
-		1.	Link
-	::.	Decryption
-		1.	Signature
+
+..	->[..	Serialisation	1.	Initial	2.	Session	3.	Rate	::.	Deserialisation]
+1.	->[..	Schema	1.	Routine	2.	Schedule	3.	Service	::.	Engine]
+2.	->[..	Mode	1.	Support	2.	About	3.	Help	::.	Status]
+3.	->[..	Cluster	1.	Tree	2.	Check	3.	Dash	::.	Tube]
+4.	->[..	Draft	1.	Factor	2.	Publish	3.	Release	::.	Memo]
+5.	->[..	Dock	1.	Menu	2.	View	3.	Data	::.	Label]
+6.	->[..	Range	1.	Date	2.	Time	3.	Clock	::.	Phase]
+7.	->[..	Terminology	1.	Pin	2.	Push	3.	Pull	::.	Authorisation]
+8.	->[..	Limit	1.	Query	2.	Archive	3.	Sequence	::.	Macro]
+9.	->[..	Read	1.	Algorithm	2.	Security	3.	Symbol	::.	Write]
+10.	->[..	Display	1.	Administration	2.	Report	3.	Blog	::.	Utility]
+11.	->[..	Parent	1.	Instance	2.	Server	3.	Client	::.	Child]
+12.	->[..	Property	1.	Series	2.	Thread	3.	Relay	::.	Attribute]
+13.	->[..	String	1.	Device	2.	Pay	3.	Basic	::.	Inventory]
+14.	->[..	Threshold	1.	Language	2.	Contact	3.	Address	::.	Dictionary]
+15.	->[..	Table	1.	Role	2.	Entity	3.	Specimen	::.	Sample]
+16.	->[..	Input	1.	Math	2.	Memory	3.	Terminal	::.	Output]
+17.	->[..	Pattern	1.	Detail	2.	Information	3.	Description	::.	Paragraph]
+18.	->[..	Library	1.	Plugin	2.	Addon	3.	Extension	::.	Lap]
+19.	->[..	Cloud	1.	Scale	2.	Environment	3.	Formula	::.	Repository]
+20.	->[..	Evaluation	1.	Main	2.	Card	3.	Serial	::.	Execution]
+21.	->[..	Pre	1.	Flag	2.	Result	3.	Return	::.	Post]
+22.	->[..	Component	1.	Dimension	2.	Content	3.	Event	::.	Edition]
+23.	->[..	Remote	1.	Format	2.	Item	3.	Issue	::.	Local]
+24.	->[..	Backup	1.	Directory	2.	Mount	3.	Database	::.	Swap]
+25.	->[..	Cyber	1.	Subject	2.	Class	3.	Chapter	::.	Web]
+26.	->[..	Network	1.	Source	2.	Trace	3.	History	::.	Credential]
+::.	->[..	Encryption	1.	Type	2.	Rank	3.	Band	::.	Decryption]
+
+..	->[..	Hash	1.	Title	2.	Name	3.	Form	::.	Tag]
+1.	->[..	Template	1.	Stack	2.	Queue	3.	Graph	::.	Route]
+2.	->[..	Screen	1.	Search	2.	Overview	3.	Definition	::.	Tip]
+3.	->[..	Cell	1.	Peer	2.	List	3.	Box	::.	Cast]
+4.	->[..	Note	1.	Key	2.	Volume	3.	Version	::.	Page]
+5.	->[..	Meta	1.	Option	2.	Console	3.	Slip	::.	Command]
+6.	->[..	Layer	1.	Dice	2.	Zone	3.	Lock	::.	Poll]
+7.	->[..	Policy	1.	Message	2.	Board	3.	Task	::.	Permission]
+8.	->[..	Maximum	1.	Convert	2.	Export	3.	Import	::.	Minimum]
+9.	->[..	Clone	1.	Compression	2.	Synchronisation	3.	Transaction	::.	Stream]
+10.	->[..	Show	1.	System	2.	Calendar	3.	Tile	::.	Map]
+11.	->[..	Resource	1.	Log	2.	Host	3.	Agent	::.	Function]
+12.	->[..	Debit	1.	Ticket	2.	Coupon	3.	Mail	::.	Credit]
+13.	->[..	Array	1.	Frequency	2.	Charge	3.	Signal	::.	Product]
+14.	->[..	Syntax	1.	Compile	2.	Contract	3.	Chain	::.	Thesaurus]
+15.	->[..	Head	1.	Slab	2.	Default	3.	New	::.	Star]
+16.	->[..	Buffer	1.	Arithmetic	2.	Static	3.	Application	::.	Scope]
+17.	->[..	Block	1.	Section	2.	Segment	3.	Division	::.	Period]
+18.	->[..	Case	1.	Seed	2.	Theme	3.	Test	::.	Prototype]
+19.	->[..	Origin	1.	Configuration	2.	Operation	3.	Setting	::.	Branch]
+20.	->[..	Top	1.	Account	2.	Register	3.	Book	::.	Batch]
+21.	->[..	Coin	1.	Point	2.	Value	3.	Score	::.	Dot]
+22.	->[..	Standard	1.	Project	2.	Media	3.	Action	::.	Generation]
+23.	->[..	Switch	1.	Previous	2.	Present	3.	Next	::.	State]
+24.	->[..	Extra	1.	Channel	2.	Port	3.	Grid	::.	Temporary]
+25.	->[..	Token	1.	Category	2.	Group	3.	Node	::.	Mark]
+26.	->[..	Socket	1.	Object	2.	Asset	3.	Scroll	::.	Unit]
+::.	->[..	Certificate	1.	Identity	2.	Profile	3.	Link	::.	Signature]
