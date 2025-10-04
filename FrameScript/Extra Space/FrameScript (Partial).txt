@@ -1,1 +1,1 @@
-16.	Module	->[2.	Memory]	->[1.	Static	2.	Dynamic	3.	Quant]
+16.	Module	<[[	2.	Memory	]]>	<[[	1.	Static	2.	Dynamic	3.	Quant	]]>
